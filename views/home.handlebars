@@ -1,0 +1,28 @@
+<h1>Create Car</h1>
+<form method="post" action="/create/car">
+    <input type="text" name="type" placeholder="type" />
+    <input type="text" name="year" placeholder="year" />
+    <input type="submit">
+</form>
+
+<h1>Get Cars</h1>
+<ul>
+    {{#each vehicles}}
+        <li>{{this.Type}}, {{this.CarId}}</li>
+    {{/each}}
+</ul>
+
+<h1>Update Car</h1>
+<form method="post" action="/update/car">
+    <input type="text" name="id" placeholder="id" />
+    <input type="text" name="type" placeholder="new type" />
+    <input type="text" name="year" placeholder="new year" />
+    <input type="submit">
+</form>
+
+<h1>Delete Car</h1>
+<form method="post" action="/delete/car">
+    <input type="text" name="id" placeholder="id" />
+    <input type="submit">
+</form>
+
